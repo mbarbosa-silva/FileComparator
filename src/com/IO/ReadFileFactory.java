@@ -99,7 +99,11 @@ public class ReadFileFactory {
 		
 		separator = prop.getProperty("SEPARATOR");
 		wrapper = prop.getProperty("WRAPPER");
-		newLine = prop.getProperty("NEWLINE");
+		if(prop.getProperty("NEWLINE").equals("NEWLINE")) {
+			newLine = System.getProperty("line.separator");
+		} else {
+			newLine = prop.getProperty("NEWLINE");
+		}
 		
 		return this;
 	}

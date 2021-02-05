@@ -20,13 +20,6 @@ public class Main {
 												.openFile("exemplo2.txt")
 												.readFileContent()
 												.getFileContent();	
-
-//		for(List<?> line : linesFromFileSource) {
-//			line.forEach(element -> System.out.print(" " + element));
-//			System.out.println("");
-//		}
-		
-//		System.out.println("");
 		
 		if(linesFromTargetFile.size() == linesFromSourceFile.size()) {
 			for(int i=0;i<linesFromSourceFile.size();i++) {
@@ -37,7 +30,7 @@ public class Main {
 						}
 					}
 				} else {
-					System.out.print("Number of colums of the files at line " + (i+1) + " does not match:\n\ttarget file num of colums: " + linesFromTargetFile.get(i).size() + "\n\tsource file num of colums: " + linesFromTargetFile.get(i).size() + "\n");
+					System.out.print("Number of colums of the files at line " + (i+1) + " does not match:\n\ttarget file num of colums: " + linesFromTargetFile.get(i).size() + "\n\tsource file num of colums: " + linesFromSourceFile.get(i).size() + "\n");
 					break;
 				}
 			}
